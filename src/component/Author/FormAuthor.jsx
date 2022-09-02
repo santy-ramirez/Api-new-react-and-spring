@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import AuthorService from '../service/AuthorService';
+import AuthorService from '../../service/AuthorService';
 
 const initialState = {
     "name": "",
