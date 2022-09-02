@@ -10,8 +10,13 @@ const create = data => {
   
   };
 
+const search = (data)=>{
+    return http.get("/article?query=" + data)
+}  
+
 const ArticleService = {
     getAll,
-    create
+    create,
+    search
 };
 export default ArticleService;

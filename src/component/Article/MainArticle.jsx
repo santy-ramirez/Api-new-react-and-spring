@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import ArticleService from '../../service/ArticleService';
 import FormArticle from './FormArticle';
+import Search from './Search';
 
 
 
@@ -30,6 +31,7 @@ function MainArticle(props) {
                 article.map(a => <p> {a.title} </p>)
             }
             <FormArticle></FormArticle>
+
         </div>
     );
 }
