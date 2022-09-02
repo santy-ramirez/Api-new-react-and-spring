@@ -1,32 +1,43 @@
 import { useEffect, useState } from 'react'
+import AuthorService from './service/AuthorService';
 
 import './App.css'
+import ListAuthors from './component/ListAuthors';
+import FormAuthor from './component/FormAuthor';
 
 
 function App() {
   const list = [];
   const [count, setCount] = useState(0)
-  const [articulos, setArticulos] = useState(list);
+  const [author, setauthor] = useState(list);
+  const [data, setData] = useState(list);
+
+  const retrieveAuthors = async () => {
+    try {
+      let res = await AuthorService.getAll()
+      let datas = res.data.content;
+      console.log(datas);
+      setauthor(datas)
+
+    } catch (error) {
+      console.error(error)
+    }
+
+  }
 
   useEffect(
     () => {
-
-      fetch('http://localhost:8080/api/v1/article')
-        .then(response => response.json())
-        .then(resaponse => setArticulos(resaponse.content))
-
-
+      retrieveAuthors();
 
     }, []);
 
+
   return (
     <div className="App">
-      <h2>todos Los Articles</h2>
-
-      {
-        articulos.map(a => <p> {a.title} </p>)
-      }
-
+      <h2>List the authors</h2>
+      <ListAuthors data={author} />
+      <h2>Create a Authors</h2>
+      <FormAuthor />
     </div>
   )
 }
