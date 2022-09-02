@@ -20,11 +20,13 @@ function FormAuthor() {
 
 
     const saveAuthor = () => {
+
+        let today = new Date();
         var data = {
             name: author.name,
             lastname: author.lastname,
             fullName: author.fullName,
-            createAt: author.createAt
+            createAt: today.toISOString()
 
         };
         console.log(data);

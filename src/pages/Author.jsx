@@ -1,10 +1,11 @@
 import React from 'react';
 import MainAuthor from '../component/Author/MainAuthor';
 import "../App.css"
+import NavComponent from './NavComponent';
 function Author(props) {
     return (
         <div >
-            soy page author
+            <NavComponent></NavComponent>
             <MainAuthor></MainAuthor>
         </div>
     );
