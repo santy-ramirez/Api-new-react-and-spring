@@ -14,6 +14,7 @@ function NavComponent(props) {
                     <Nav className="me-auto">
                         <Nav.Link href="author">Author</Nav.Link>
                         <Nav.Link href="article">Article</Nav.Link>
+                        <Nav.Link href="search">Search Article</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>

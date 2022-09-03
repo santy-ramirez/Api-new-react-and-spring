@@ -2,6 +2,12 @@ import React from 'react';
 import { useRef } from 'react';
 import { useState, useEfect } from 'react';
 import ArticleService from '../../service/ArticleService';
+
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { Container } from 'react-bootstrap';
+
+
 const initialState = {
     "title": "",
     "description": " ",
@@ -64,61 +70,89 @@ function FormArticle(props) {
 
 
     return (
-        <div>
-            <h1>form the Article</h1>
+        <Container>
             <div>
-                <input
-                    placeholder='enter name author'
-                    name='title'
-                    type="text"
-                    onChange={handleInputChange}
-                    value={article.title}
-                ></input>
-                <br />
-                <input
-                    placeholder='enter name author'
-                    name='description'
-                    type="text"
-                    onChange={handleInputChange}
-                    value={article.description}
-                ></input>
-                <br />
-                <input
-                    placeholder='enter name author'
-                    name='url'
-                    type="text"
-                    onChange={handleInputChange}
-                    value={article.url}
-                ></input>
-                <br />
-                <input
-                    placeholder='enter name author'
-                    name='urlToImage'
-                    type="text"
-                    onChange={handleInputChange}
-                    value={article.urlToImage}
-                ></input>
-                <br />
-                <textarea
-                    name="content"
-                    placeholder="content article"
-                    onChange={handleInputChange}
-                    value={article.content}
-                ></textarea>
-                <br />
-                <input
-                    name='published'
-                    type="checkbox"
-                    onChange={handleInputChange}
-                    // ref={inputPublished}
-                    value={article.content}
-                ></input>
-                <br />
-                <button
-                    onClick={saveArticle}
-                >enviar</button>
-            </div>
-        </div>
+                <h1>form the Article</h1>
+                <div>
+                    <Form>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Title
+                                <input className='form-control'
+                                    placeholder='enter name author'
+                                    name='title'
+                                    type="text"
+                                    onChange={handleInputChange}
+                                    value={article.title}
+                                ></input>
+                            </Form.Label>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>description
+                                <input className='form-control'
+                                    placeholder='enter name author'
+                                    name='description'
+                                    type="text"
+                                    onChange={handleInputChange}
+                                    value={article.description}
+                                ></input>
+                            </Form.Label>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label>Url
+                                <input className='form-control'
+                                    placeholder='enter name author'
+                                    name='url'
+                                    type="text"
+                                    onChange={handleInputChange}
+                                    value={article.url}
+                                ></input>
+                            </Form.Label>
+                        </Form.Group>
+                        <Form.Group className="mb-3">
+                            <Form.Label> UrlToImage
+                                <input className='form-control'
+                                    placeholder='enter name author'
+                                    name='urlToImage'
+                                    type="text"
+                                    onChange={handleInputChange}
+                                    value={article.urlToImage}
+                                ></input>
+                            </Form.Label>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>
+                                <textarea className='form-control'
+                                    name="content"
+                                    placeholder="content article"
+                                    onChange={handleInputChange}
+                                    value={article.content}
+                                ></textarea>
+                            </Form.Label>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Form.Label>
+                                <input className='form-control'
+                                    name='published'
+                                    type="checkbox"
+                                    onChange={handleInputChange}
+                                    // ref={inputPublished}
+                                    value={article.content}
+                                ></input>
+                            </Form.Label>
+                        </Form.Group>
+
+                        <Form.Group className="mb-3">
+                            <Button
+                                onClick={saveArticle}
+                            >enviar</Button>
+                        </Form.Group>
+                    </Form>
+                </div>
+            </div >
+        </Container>
+
     );
 }
 
