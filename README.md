@@ -1,6 +1,6 @@
 # react and spring
 
-Integrando api hecho con spring con react, api de publicació.n de articulos, donde se puede hacer CRUD de los recursos article, author y source.
+Integrando api hecho con spring con react, api de publicació.de articulos, donde se puede hacer CRUD de los recursos article, author y source.
  [ver proyecto hecho en spring](https://github.com/santy-ramirez/news)
 Las solicitudes de endpoints realizados en este proyecto:
 
