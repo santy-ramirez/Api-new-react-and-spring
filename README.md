@@ -19,7 +19,7 @@ GET http://localhost:8080/api/v1/author
 ~~~
 
 
-para ver la documentacion y los difenrentes endpoints del proyecto hecho con spring click [Aqui](https://documenter.getpostman.com/view/21526249/VUjQkjKG)
+para ver la documentacion y los diferentes endpoints del proyecto hecho con spring click [Aqui](https://documenter.getpostman.com/view/21526249/VUjQkjKG)
 
 Las tecnologias usandos en este proyecto react js,axios,bootstrap.
 spring-boot, mysql
