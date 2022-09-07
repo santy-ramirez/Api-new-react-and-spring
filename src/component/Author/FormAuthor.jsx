@@ -51,6 +51,7 @@ function FormAuthor() {
 
 
                 <div>
+                    <h2>Create a Authors</h2>
                     <Form>
                         <Form.Group>
                             <Form.Label>name

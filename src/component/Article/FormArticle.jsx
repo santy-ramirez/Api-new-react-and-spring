@@ -6,6 +6,7 @@ import ArticleService from '../../service/ArticleService';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Container } from 'react-bootstrap';
+import AlertComponent from './AlertComponent';
 
 
 const initialState = {
@@ -31,7 +32,8 @@ function FormArticle(props) {
 
     const [article, setArticle] = useState(initialState);
     const [published, setPublished] = useState(false);
-    // const inputPublished = useRef(null);
+    const [show, setShow] = useState(false);
+
 
     const handleInputChange = event => {
         const { name, value } = event.target;
@@ -60,20 +62,30 @@ function FormArticle(props) {
         console.log(data);
         ArticleService.create(data)
             .then(response => {
-                console.log(response)
+                console.log(response.status)
+                const stado = response.status;
+                if (stado == 201) {
+                    setShow(true)
+                }
             })
             .catch(e => {
                 console.log(e)
             })
     };
 
+    const notShow = () => {
+        setShow(false);
+    }
 
 
     return (
-        <Container>
-            <div>
+        <Container  >
+            <div className="mx-auto" style={{ maxWidth: 400 }} >
                 <h1>form the Article</h1>
                 <div>
+                    < AlertComponent
+                        show={show}
+                        notShow={notShow} />
                     <Form>
                         <Form.Group className="mb-3">
                             <Form.Label>Title
@@ -151,7 +163,7 @@ function FormArticle(props) {
                     </Form>
                 </div>
             </div >
-        </Container>
+        </Container >
 
     );
 }

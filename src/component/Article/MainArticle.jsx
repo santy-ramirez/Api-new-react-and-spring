@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import ArticleService from '../../service/ArticleService';
 import FormArticle from './FormArticle';
+import ListArticle from './ListArticle';
 import Search from './Search';
 
 
@@ -26,11 +27,11 @@ function MainArticle(props) {
         }
         , [])
     return (
+
         <div>
-            {
-                article.map(a => <p> {a.title} </p>)
-            }
             <FormArticle></FormArticle>
+
+            <ListArticle data={article} />
 
         </div>
     );

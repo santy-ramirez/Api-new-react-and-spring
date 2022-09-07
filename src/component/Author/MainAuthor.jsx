@@ -1,8 +1,8 @@
 import React from 'react';
-import ListAuthors from './ListAuthors';
 import FormAuthor from './FormAuthor';
 import AuthorService from '../../service/AuthorService';
 import { useEffect, useState } from 'react'
+import TableComponent from './TableComponent';
 
 function MainAuthor(props) {
 
@@ -32,11 +32,9 @@ function MainAuthor(props) {
 
 
     return (
-        <div className="App">
-            <h2>List the authors</h2>
-            <ListAuthors data={author} />
-            <h2>Create a Authors</h2>
+        <div className="main__author">
             <FormAuthor />
+            <TableComponent data={author} />
         </div>
     )
 }
