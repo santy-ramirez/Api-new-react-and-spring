@@ -12,3 +12,56 @@
     margin: 0 auto;
     max-width: 1000px;
   }
+  .admin__header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  }
+  .admin__header img{
+    border-radius: 50%;
+  }
+  .admin__body{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .admin__body button{
+    margin: 1rem;
+  }
+  .admin__body button a{
+    text-decoration: none;
+   
+  }
+  a{
+    text-decoration: none !important;
+    color: black !important;
+  }
+
+  button {
+   
+    background-color: rgb(245, 117, 42) !important;
+    color: white !important;
+   
+  }
+  .article{
+    border: solid rgb(190, 185, 185) 1px;
+    padding: 2rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+  }
+.article:hover{
+  box-shadow: 10px 10px 5px 0px rgba(140,126,126,0.75);
+  cursor: pointer;
+}
+
+  .article_left img{
+    margin: 1rem;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  .main__author{
+    margin-top: 100px;
+  }

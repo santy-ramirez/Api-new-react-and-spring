@@ -7,7 +7,7 @@ function FormAuthor({ handleInputChange, author, saveAuthor, updateAuthor }) {
 
     return (
         <Container>
-            <div>
+            <div  >
                 <div>
                     <h2>Create a Authors</h2>
                     <Form>
@@ -35,7 +35,7 @@ function FormAuthor({ handleInputChange, author, saveAuthor, updateAuthor }) {
                         </Form.Group>
 
                         <br />
-                        <Button
+                        <Button style={{ margin: 4 }}
                             onClick={saveAuthor}
                         >Guardar</Button>
                         <Button

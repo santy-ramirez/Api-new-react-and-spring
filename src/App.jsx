@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Articles from './pages/Articles';
 import Search from './component/Article/Search';
 import TableComponent from './component/Author/TableComponent';
+import Administration from './pages/Administration';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/article" element={<Articles />} />
         <Route path="/search" element={<Search />} />
 
+        <Route path="/administration" element={<Administration />} />
 
       </Routes>
     </div >

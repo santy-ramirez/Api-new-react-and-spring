@@ -6,6 +6,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import NavComponent from '../../pages/NavComponent';
+import ListArticle from './ListArticle';
 
 function Search(props) {
 
@@ -48,16 +49,22 @@ function Search(props) {
                     </div>
                 </Row>
                 <Row>
+
+
                     <ul>
                         {
                             results.map(a =>
-                                <div className='item-list' key={a.title} >
-                                    <h4>{a.title}</h4>
-                                    <p>{a.description} </p>
-                                    <img width='400px' height='100px' src={a.urlToImage} />
-                                    <p>{a.content} </p>
-                                </div>
-                            )
+                                <div className='article' key={a.title} >
+                                    <div className='article_rigth' >
+                                        <h2>{a.title}</h2>
+                                        <p>{a.description} </p>
+                                        <p>{a.content} </p>
+                                    </div>
+                                    <div className='article_left' >
+                                        <img src={a.urlToImage} />
+                                    </div>
+                                </div>)
+
 
                         }
                     </ul>
