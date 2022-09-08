@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Home from './pages/Home';
 import Articles from './pages/Articles';
 import Search from './component/Article/Search';
+import TableComponent from './component/Author/TableComponent';
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
         <Route path="/author" element={<Author />} />
         <Route path="/article" element={<Articles />} />
         <Route path="/search" element={<Search />} />
+
+
       </Routes>
     </div >
   )

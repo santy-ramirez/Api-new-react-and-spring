@@ -9,10 +9,16 @@ const create = data => {
   return http.post("/author", data);
 
 };
+
+const deleteAthor = (id) =>{
+  console.log(`id en service/${id}`);
+  return http.delete(`/author/${id}`); 
+};
  
 const AuthorService = {
   getAll,
   create,
+  deleteAthor
  
 };
 export default AuthorService;
