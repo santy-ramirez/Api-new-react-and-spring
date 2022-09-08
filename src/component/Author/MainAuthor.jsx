@@ -43,7 +43,8 @@ function MainAuthor(props) {
 
     const handleDelete = (e) => {
         setDelet("deliting")
-        const elementSelected = e.target.innerText;
+        const elementSelected = e.target.value;
+        //console.log(elementSelected)
         deleteAuth(elementSelected);
         setDelet("deleted")
 

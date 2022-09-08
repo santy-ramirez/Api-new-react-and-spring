@@ -54,7 +54,8 @@ function Search(props) {
                                 <div className='item-list' key={a.title} >
                                     <h4>{a.title}</h4>
                                     <p>{a.description} </p>
-                                    <img width='400px' height='100px' src={a.image} />
+                                    <img width='400px' height='100px' src={a.urlToImage} />
+                                    <p>{a.content} </p>
                                 </div>
                             )
 

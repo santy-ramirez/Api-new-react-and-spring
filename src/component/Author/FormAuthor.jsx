@@ -3,13 +3,11 @@ import { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 
-function FormAuthor({ handleInputChange, author, saveAuthor }) {
+function FormAuthor({ handleInputChange, author, saveAuthor, }) {
 
     return (
         <Container>
             <div>
-
-
                 <div>
                     <h2>Create a Authors</h2>
                     <Form>
@@ -42,7 +40,6 @@ function FormAuthor({ handleInputChange, author, saveAuthor }) {
                         >Guardar</Button>
                     </Form>
                 </div>
-
             </div>
         </Container>
     );

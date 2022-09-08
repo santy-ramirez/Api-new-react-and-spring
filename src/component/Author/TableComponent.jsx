@@ -8,9 +8,11 @@ function TableComponent({ data, handleDelete }) {
                 <thead>
                     <tr>
                         <th>First Name</th>
-                        <th>last  Name</th>
-                        <th>fullname </th>
-                        <th>data</th>
+                        <th>Last  Name</th>
+                        <th>Fullname </th>
+                        <th>Id</th>
+                        <th>Action</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -20,15 +22,15 @@ function TableComponent({ data, handleDelete }) {
                                 <td>{a.name} </td>
                                 <td>{a.lastname} </td>
                                 <td>{a.fullName} </td>
-                                <td onClick={handleDelete}   >{a.id} </td>
+                                <td  >{a.id} </td>
+                                <td ><button onClick={handleDelete} value={a.id} >delete</button> </td>
                             </tr>
-
                         )
                     }
 
                 </tbody>
             </Table>
-        </div>
+        </div >
     );
 }
 
