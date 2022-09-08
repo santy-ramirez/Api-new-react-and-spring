@@ -1,7 +1,7 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
 
-function TableComponent({ data, handleDelete }) {
+function TableComponent({ data, handleDelete, heandleUpdate }) {
     return (
         <div>
             <Table striped bordered hover>
@@ -11,8 +11,8 @@ function TableComponent({ data, handleDelete }) {
                         <th>Last  Name</th>
                         <th>Fullname </th>
                         <th>Id</th>
-                        <th>Action</th>
-
+                        <th>Acction Delete</th>
+                        <th>Acction Update</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -24,6 +24,7 @@ function TableComponent({ data, handleDelete }) {
                                 <td>{a.fullName} </td>
                                 <td  >{a.id} </td>
                                 <td ><button onClick={handleDelete} value={a.id} >delete</button> </td>
+                                <td><button onClick={heandleUpdate} value={a.id} >update</button></td>
                             </tr>
                         )
                     }

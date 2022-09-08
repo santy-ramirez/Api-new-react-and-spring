@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Form, Button, Container } from 'react-bootstrap';
 
 
-function FormAuthor({ handleInputChange, author, saveAuthor, }) {
+function FormAuthor({ handleInputChange, author, saveAuthor, updateAuthor }) {
 
     return (
         <Container>
@@ -23,7 +23,7 @@ function FormAuthor({ handleInputChange, author, saveAuthor, }) {
                             </Form.Label>
                         </Form.Group>
                         <Form.Group>
-                            <Form.Label> lasname
+                            <Form.Label> Lastname
                                 <input className='form-control'
                                     placeholder='enter lastname author'
                                     name='lastname'
@@ -38,6 +38,9 @@ function FormAuthor({ handleInputChange, author, saveAuthor, }) {
                         <Button
                             onClick={saveAuthor}
                         >Guardar</Button>
+                        <Button
+                            onClick={updateAuthor}
+                        >update</Button>
                     </Form>
                 </div>
             </div>

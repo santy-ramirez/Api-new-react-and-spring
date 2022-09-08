@@ -105,6 +105,56 @@ function MainAuthor(props) {
             });
     };
 
+    const heandleUpdate = (e) => {
+        console.log(e.target.value);
+        const id = e.target.value;
+
+        data.map((a) => {
+            if (a.id == id) {
+                console.log(a);
+                setAuthor(
+                    a
+                )
+            }
+
+        })
+
+    }
+
+
+
+    const updateAuthor = () => {
+        let today = new Date();
+        var data = {
+            name: author.name,
+            lastname: author.lastname,
+            fullName: author.name + " " + author.lastname,
+            createAt: today.toISOString()
+
+        };
+        AuthorService.updateAuthor(author.id, data)
+            .then(response => {
+                console.log(response)
+                setAuthor(
+                    {
+                        name: "",
+                        lastname: "",
+                        fullName: "",
+                        createAt: ""
+                    }
+                )
+
+
+            })
+            .catch(e => {
+                console.log(e);
+            });
+
+
+    }
+
+
+
 
     return (
         <div className="main__author">
@@ -112,9 +162,12 @@ function MainAuthor(props) {
                 handleInputChange={handleInputChange}
                 author={author}
                 saveAuthor={saveAuthor}
+                updateAuthor={updateAuthor}
 
             />
-            <TableComponent handleDelete={handleDelete} data={data} />
+            <TableComponent
+                heandleUpdate={heandleUpdate}
+                handleDelete={handleDelete} data={data} />
         </div>
     )
 }
