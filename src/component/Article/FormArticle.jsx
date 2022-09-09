@@ -31,7 +31,7 @@ import AlertComponent from './AlertComponent';
 function FormArticle({ handleInputChange, article, saveArticle, show, notShow }) {
     return (
         <Container  >
-            <div className="mx-auto" style={{ maxWidth: 400 }} >
+            <div className="mx-auto"  >
                 <h1>form the Article</h1>
                 <div>
                     < AlertComponent
@@ -41,7 +41,7 @@ function FormArticle({ handleInputChange, article, saveArticle, show, notShow })
                         <Form.Group className="mb-3">
                             <Form.Label>Title
                                 <input className='form-control'
-                                    placeholder='enter name author'
+                                    placeholder='Enter title the Article'
                                     name='title'
                                     type="text"
                                     onChange={handleInputChange}
@@ -50,9 +50,9 @@ function FormArticle({ handleInputChange, article, saveArticle, show, notShow })
                             </Form.Label>
                         </Form.Group>
                         <Form.Group className="mb-3">
-                            <Form.Label>description
+                            <Form.Label>Description
                                 <input className='form-control'
-                                    placeholder='enter name author'
+                                    placeholder='Enter description the Article'
                                     name='description'
                                     type="text"
                                     onChange={handleInputChange}
@@ -63,7 +63,7 @@ function FormArticle({ handleInputChange, article, saveArticle, show, notShow })
                         <Form.Group className="mb-3">
                             <Form.Label>Url
                                 <input className='form-control'
-                                    placeholder='enter name author'
+                                    placeholder='Enter url the Article'
                                     name='url'
                                     type="text"
                                     onChange={handleInputChange}
@@ -74,7 +74,7 @@ function FormArticle({ handleInputChange, article, saveArticle, show, notShow })
                         <Form.Group className="mb-3">
                             <Form.Label> UrlToImage
                                 <input className='form-control'
-                                    placeholder='enter name author'
+                                    placeholder='Enter urlToImage the Article'
                                     name='urlToImage'
                                     type="text"
                                     onChange={handleInputChange}
@@ -84,10 +84,10 @@ function FormArticle({ handleInputChange, article, saveArticle, show, notShow })
                         </Form.Group>
 
                         <Form.Group className="mb-3">
-                            <Form.Label>
+                            <Form.Label>Content
                                 <textarea className='form-control'
                                     name="content"
-                                    placeholder="content article"
+                                    placeholder="Enter content article"
                                     onChange={handleInputChange}
                                     value={article.content}
                                 ></textarea>

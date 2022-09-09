@@ -3,6 +3,7 @@ import FormAuthor from './FormAuthor';
 import AuthorService from '../../service/AuthorService';
 import { useEffect, useState } from 'react'
 import TableComponent from './TableComponent';
+import ModalComponent from './ModalComponent';
 
 
 const initialState = {
@@ -14,6 +15,7 @@ const initialState = {
 function MainAuthor(props) {
 
     const list = [];
+    const [show, setShow] = useState(false);
     const [author, setAuthor] = useState(initialState);
     const [data, setData] = useState(list);
     const [delet, setDelet] = useState(false);
@@ -44,7 +46,6 @@ function MainAuthor(props) {
     const handleDelete = (e) => {
         setDelet("deliting")
         const elementSelected = e.target.value;
-        //console.log(elementSelected)
         deleteAuth(elementSelected);
         setDelet("deleted")
 
@@ -124,6 +125,7 @@ function MainAuthor(props) {
 
 
     const updateAuthor = () => {
+
         let today = new Date();
         var data = {
             name: author.name,
@@ -132,6 +134,7 @@ function MainAuthor(props) {
             createAt: today.toISOString()
 
         };
+
         AuthorService.updateAuthor(author.id, data)
             .then(response => {
                 console.log(response)
@@ -153,11 +156,15 @@ function MainAuthor(props) {
 
     }
 
-
+    const handleClose = () => setShow(false);
 
 
     return (
         <div className="main__author">
+            <ModalComponent
+                show={show}
+                handleClose={handleClose}
+            />
             <FormAuthor
                 handleInputChange={handleInputChange}
                 author={author}

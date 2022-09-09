@@ -19,6 +19,7 @@
 
   }
   .admin__header img{
+    max-width: 200px;
     border-radius: 50%;
   }
   .admin__body{
@@ -29,9 +30,14 @@
   }
   .admin__body button{
     margin: 1rem;
+    border: none;
+    border-radius: 12px;
+    padding: .8rem;
+    
   }
   .admin__body button a{
     text-decoration: none;
+    color: aliceblue !important;
    
   }
   a{
@@ -64,4 +70,13 @@
   }
   .main__author{
     margin-top: 100px;
+  }
+  .main__article{
+    padding-top: 100px;
+    max-width: 1300px;
+    display: flex;
+    margin: 0 auto;
+  }
+  .admin{
+    margin-top: 50px;
   }

@@ -43,7 +43,12 @@ function Search(props) {
                 <Row  >
                     <div>
                         <form className='search' onSubmit={searchQuery}>
-                            <input type='text' value={word} onChange={heandleOnchage} ></input>
+                            <input
+                                type='text'
+                                value={word}
+                                onChange={heandleOnchage}
+                                placeholder='Enter word to search'
+                            ></input>
                             <button>Search</button>
                         </form>
                     </div>

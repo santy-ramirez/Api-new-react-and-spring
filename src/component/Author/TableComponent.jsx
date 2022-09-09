@@ -21,7 +21,7 @@ function TableComponent({ data, handleDelete, heandleUpdate }) {
                             <tr key={a.id}>
                                 <td>{a.name} </td>
                                 <td>{a.lastname} </td>
-                                <td>{a.fullName} </td>
+                                <td>{a.name + " " + a.lastname} </td>
                                 <td  >{a.id} </td>
                                 <td ><button onClick={handleDelete} value={a.id} >delete</button> </td>
                                 <td><button onClick={heandleUpdate} value={a.id} >update</button></td>

@@ -101,7 +101,7 @@ function MainArticle(props) {
 
     return (
 
-        <div  >
+        <div className='main__article' >
             <FormArticle
                 show={show}
                 notShow={notShow}
