@@ -9,7 +9,7 @@ function Administration(props) {
             <NavComponent></NavComponent>
             <div className='admin'>
                 <div className='admin__header' >
-                    <h2>Welcome User administration</h2>
+                    <h2>Welcome Administrator  User</h2>
                     <img src={image} />
                 </div>
                 <div className='admin__body' >

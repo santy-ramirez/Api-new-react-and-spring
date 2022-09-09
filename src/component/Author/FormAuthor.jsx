@@ -12,7 +12,7 @@ function FormAuthor({ handleInputChange, author, saveAuthor, updateAuthor }) {
                     <h2>Create a Authors</h2>
                     <Form>
                         <Form.Group>
-                            <Form.Label>name
+                            <Form.Label>Name
                                 <input className='form-control'
                                     placeholder='enter name author'
                                     name='name'

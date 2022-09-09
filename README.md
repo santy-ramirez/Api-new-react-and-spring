@@ -25,8 +25,9 @@ para ver la documentacion y los diferentes endpoints del proyecto hecho con spri
 ![](./src/assets/captura2.png)
 ![](./src/assets/captura5.png)
 
+## Video Demo
 
-
+[ver aqui](https://www.youtube.com/watch?v=mwx_g8NV1DI)
 
 
 Las tecnologias usandos en este proyecto react js,axios,bootstrap.

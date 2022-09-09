@@ -45,8 +45,9 @@ function MainArticle(props) {
     useEffect(
         () => {
             retrieveArticles()
+            console.log("se acciono")
         }
-        , [article])
+        , [show])
 
 
     const handleInputChange = event => {
